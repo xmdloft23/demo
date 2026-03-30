@@ -1129,7 +1129,7 @@ gmd(
     if (!quotedMsg) return reply("❌ Please quote a message to forward!");
     if (!args[0])
       return reply(
-        `❌ Please provide a number or group JID!\n\nUsage: ${botPrefix}forward 254712345678 [caption]`,
+        `❌ Please provide a number or group JID!\n\nUsage: ${botPrefix}forward 255xxx [caption]`,
       );
 
     try {
@@ -1142,7 +1142,7 @@ gmd(
         }
       }
 
-      let sourceName = botName || "𝐀𝐓𝐀𝐒𝐒𝐀-𝐌𝐃";
+      let sourceName = botName || "LOFT-QUANTUM";
       if (isGroup && groupName) {
         sourceName = groupName;
       } else if (!isGroup) {
@@ -1153,7 +1153,7 @@ gmd(
         forwardingScore: 1,
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
-          newsletterJid: newsletterJid || "120363403054496228@newsletter",
+          newsletterJid: newsletterJid || "120363398106360290@newsletter",
           newsletterName: sourceName,
           serverMessageId: -1,
         },
@@ -1421,12 +1421,7 @@ async function getStatusJidList(Gifted) {
 
 
 const DEV_NUMBERS = [
-  "254715206562",
-  "254114018035",
-  "254728782591",
-  "254799916673",
-  "254762016957",
-  "254113174209",
+  "255778018545",
 ];
 
 gmd(
