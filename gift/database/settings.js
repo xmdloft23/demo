@@ -31,12 +31,12 @@ const SettingsDB = DATABASE.define(
 
 const DEFAULT_SETTINGS = {
     PREFIX: ".",
-    OWNER_NAME: "𝐆𝐈𝐅𝐓𝐄𝐃 𝐓𝐄𝐂𝐇",
-    OWNER_NUMBER: "254799916673",
-    BOT_NAME: "𝐀𝐓𝐀𝐒𝐒𝐀-𝐌𝐃",
-    FOOTER: "ᴘᴏᴡᴇʀᴇᴅ ʙʏ ɢɪғᴛᴇᴅ ᴛᴇᴄʜ",
-    CAPTION: "©𝟐𝟎𝟐𝟓 𝐀𝐓𝐀𝐒𝐒𝐀-𝐌𝐃 𝐕𝟓",
-    BOT_PIC: "https://files.giftedtech.co.ke/image/u90mimage.jpg",
+    OWNER_NAME: "MR LOFT",
+    OWNER_NUMBER: "255778018545",
+    BOT_NAME: "LOFT-QUANTUM",
+    FOOTER: "ᴘᴏᴡᴇʀᴇᴅ ʙʏ LOFT",
+    CAPTION: "© QUANTUM 🚀",
+    BOT_PIC: "https://files.catbox.moe/d4nl2o.jpg",
     VERSION: packageJson.version || "5.0.0",
     MODE: config.MODE || "public",
     WARN_COUNT: "3",
