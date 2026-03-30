@@ -57,8 +57,8 @@ gmd({
                 }
 
                 const stickerBuffer = await gmdSticker(mediaFile, {
-                    pack: packName || "𝐀𝐓𝐀𝐒𝐒𝐀-𝐌𝐃", 
-                    author: packAuthor || "GIFTED-TECH",
+                    pack: packName || "LOFT-QUANTUM", 
+                    author: packAuthor || "LOFTxmd",
                     type: q.includes("--crop") || q.includes("-c") ? StickerTypes.CROPPED : StickerTypes.FULL,
                     categories: ["🤩", "🎉"],
                     id: "12345",
@@ -78,8 +78,8 @@ gmd({
                 await fs.writeFile(stickerFile, stickerData);
 
                 const newStickerBuffer = await gmdSticker(stickerFile, {
-                    pack: packName || "𝐀𝐓𝐀𝐒𝐒𝐀-𝐌𝐃", 
-                    author: packAuthor || "GIFTED-TECH",
+                    pack: packName || "LOFT-QUANTUM", 
+                    author: packAuthor || "LOFTxmd",
                     type: q.includes("--crop") || q.includes("-c") ? StickerTypes.CROPPED : StickerTypes.FULL,
                     categories: ["🤩", "🎉"],
                     id: "12345",
