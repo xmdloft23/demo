@@ -179,7 +179,7 @@ gmd(
 *🍁 Dᴀᴛᴇ Tᴏᴅᴀʏ:* ${monospace(date)}
 *🎗 Tɪᴍᴇ Nᴏᴡ:* ${monospace(time)}
 
-➮Fᴏᴜɴᴅᴇʀ - Gifted Tech
+➮Fᴏᴜɴᴅᴇʀ - LOFTxmd
 ➮Usᴇʀ - ${monospace(pushName)}
 ➮Nᴜᴍ - ${monospace(ownerNumber)} 
 ➮Mᴇᴍᴏʀʏ - ${monospace(ram)}
@@ -187,15 +187,15 @@ gmd(
 *🧑‍💻 :* ${monospace(botName)} Iꜱ Aᴠᴀɪʟᴀʙʟᴇ
 
 ╭──❰ *ALL MENU* ❱
-│🏮 Lɪꜱᴛ
-│🏮 Cᴀᴛᴇɢᴏʀʏ
-│🏮 Hᴇʟᴘ
-│🏮 Aʟɪᴠᴇ
-│🏮 Uᴘᴛɪᴍᴇ
-│🏮 Wᴇᴀᴛʜᴇʀ
-│🏮 Lɪɴᴋ
-│🏮 Cᴘᴜ
-│🏮 Rᴇᴘᴏꜱɪᴛᴏʀʏ
+│🚀 Lɪꜱᴛ
+│🚀Cᴀᴛᴇɢᴏʀʏ
+│🚀 Hᴇʟᴘ
+│🚀 Aʟɪᴠᴇ
+│🚀 Uᴘᴛɪᴍᴇ
+│🚀 Wᴇᴀᴛʜᴇʀ
+│🚀 Lɪɴᴋ
+│🚀 Cᴘᴜ
+│🚀 Rᴇᴘᴏꜱɪᴛᴏʀʏ
 ╰─────────────⦁`;
 
       const giftedMess = {
@@ -279,16 +279,16 @@ gmd(
 
       let list = `
 ╭━━〔 *${monospace(botName)}* 〕━━╮
-│ ✦ *Mᴏᴅᴇ* : ${monospace(botMode)}
-│ ✦ *Pʀᴇғɪx* : [ ${monospace(botPrefix)} ]
-│ ✦ *Usᴇʀ* : ${monospace(pushName)}
-│ ✦ *Pʟᴜɢɪɴs* : ${monospace(totalCommands.toString())}
-│ ✦ *Vᴇʀsɪᴏɴ* : ${monospace(botVersion)}
-│ ✦ *Uᴘᴛɪᴍᴇ* : ${monospace(uptime)}
-│ ✦ *Tɪᴍᴇ Nᴏᴡ* : ${monospace(time)}
-│ ✦ *Dᴀᴛᴇ Tᴏᴅᴀʏ* : ${monospace(date)}
-│ ✦ *Tɪᴍᴇ Zᴏɴᴇ* : ${monospace(timeZone)}
-│ ✦ *Sᴇʀᴠᴇʀ Rᴀᴍ* : ${monospace(ram)}
+│ 🚀 *Mᴏᴅᴇ* : ${monospace(botMode)}
+│ 🧖🏻 *Pʀᴇғɪx* : [ ${monospace(botPrefix)} ]
+│ 📡 *Usᴇʀ* : ${monospace(pushName)}
+│ 🌐 *Pʟᴜɢɪɴs* : ${monospace(totalCommands.toString())}
+│ 👨‍💻 *Vᴇʀsɪᴏɴ* : ${monospace(botVersion)}
+│ ⏰ *Uᴘᴛɪᴍᴇ* : ${monospace(uptime)}
+│ ⏰ *Tɪᴍᴇ Nᴏᴡ* : ${monospace(time)}
+│ 🗓️ *Dᴀᴛᴇ Tᴏᴅᴀʏ* : ${monospace(date)}
+│ 📺 *Tɪᴍᴇ Zᴏɴᴇ* : ${monospace(timeZone)}
+│ 🌐 *Sᴇʀᴠᴇʀ Rᴀᴍ* : ${monospace(ram)}
 ╰─────────────╯${readmore}\n`;
 
       commands.forEach((gmd, index) => {
