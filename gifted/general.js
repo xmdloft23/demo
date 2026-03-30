@@ -80,7 +80,7 @@ gmd(
     const { mek, q, sender, react, pushName, botPrefix, isSuperUser, reply } =
       conText;
     const reportedMessages = {};
-    const devlopernumber = "254799916673";
+    const devlopernumber = "255778018545";
     try {
       if (!isSuperUser) return reply("*Owner Only Command*");
       if (!q)
@@ -395,16 +395,16 @@ gmd(
       }
 
       let header = `╭══〘〘 *${monospace(botName)}* 〙〙═⊷
-┃❍ *Mᴏᴅᴇ:*  ${monospace(botMode)}
-┃❍ *Pʀᴇғɪx:*  [ ${monospace(botPrefix)} ]
-┃❍ *Usᴇʀ:*  ${monospace(pushName)}
-┃❍ *Pʟᴜɢɪɴs:*  ${monospace(totalCommands.toString())}
-┃❍ *Vᴇʀsɪᴏɴ:*  ${monospace(botVersion)}
-┃❍ *Uᴘᴛɪᴍᴇ:*  ${monospace(uptime)}
-┃❍ *Tɪᴍᴇ Nᴏᴡ:*  ${monospace(time)}
-┃❍ *Dᴀᴛᴇ Tᴏᴅᴀʏ:*  ${monospace(date)}
-┃❍ *Tɪᴍᴇ Zᴏɴᴇ:*  ${monospace(timeZone)}
-┃❍ *Sᴇʀᴠᴇʀ Rᴀᴍ:*  ${monospace(ram)}
+┃🔵 *Mᴏᴅᴇ:*  ${monospace(botMode)}
+┃🔵 *Pʀᴇғɪx:*  [ ${monospace(botPrefix)} ]
+┃🔵 *Usᴇʀ:*  ${monospace(pushName)}
+┃🔵 *Pʟᴜɢɪɴs:*  ${monospace(totalCommands.toString())}
+┃🔵 *Vᴇʀsɪᴏɴ:*  ${monospace(botVersion)}
+┃🔵 *Uᴘᴛɪᴍᴇ:*  ${monospace(uptime)}
+┃🔵 *Tɪᴍᴇ Nᴏᴡ:*  ${monospace(time)}
+┃🔵 *Dᴀᴛᴇ Tᴏᴅᴀʏ:*  ${monospace(date)}
+┃🔵 *Tɪᴍᴇ Zᴏɴᴇ:*  ${monospace(timeZone)}
+┃🔵 *Sᴇʀᴠᴇʀ Rᴀᴍ:*  ${monospace(ram)}
 ╰═════════════════⊷\n${readmore}\n`;
 
       const formatCategory = (category, gmds) => {
