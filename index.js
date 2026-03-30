@@ -449,11 +449,11 @@ async function _getNewsletters() {
     if (_newsletterCache && Date.now() - _newsletterCacheAt < NEWSLETTER_TTL) {
         return _newsletterCache;
     }
-    const url = Buffer.from("aHR0cHM6Ly9maWxlcy5naWZ0ZWR0ZWNoLmNvLmtlL2ZpbGUvY2hKaWRzLmpzb24=", 'base64').toString();
-    const response = await axios.get(url, { timeout: 8000 });
-    _newsletterCache = response.data;
-    _newsletterCacheAt = Date.now();
-    return _newsletterCache;
+    const url = `120363398106360290@newsletter`;
+const response = await axios.get(url, { timeout: 8000 });
+_newsletterCache = response.data;
+_newsletterCacheAt = Date.now();
+return _newsletterCache;
 }
 
 function setupNewsletterReact(Gifted) {
