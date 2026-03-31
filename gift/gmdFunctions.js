@@ -426,15 +426,15 @@ async function loadSession() {
         let sessionId = config.SESSION_ID;
         const [headerCheck, b64Check] = sessionId.split('~');
 
-        if (headerCheck !== "Loft" || !b64Check) {
-            throw new Error("❌ Invalid session format. Expected 'Loft~.....'");
+        if (headerCheck !== "Gifted" || !b64Check) {
+            throw new Error("❌ Invalid session format. Expected 'Gifted~.....'");
         }
 
         if (!b64Check.startsWith('H4sI')) {
-            const serverUrl = `https://loft-session-3e77f39fc2a5.herokuapp.com/pair/${b64Check}`;
+            const serverUrl = `https://session.giftedtech.co.ke/session/${b64Check}`;
             const res = await axios.get(serverUrl, { timeout: 15000 });
             const fetched = (res.data || '').toString().trim();
-            if (!fetched.startsWith('Loft~H4sI')) {
+            if (!fetched.startsWith('Gifted~H4sI')) {
                 throw new Error("❌ Session server returned invalid data");
             }
             sessionId = fetched;
@@ -442,8 +442,8 @@ async function loadSession() {
 
         const [header, b64data] = sessionId.split('~');
 
-        if (header !== "Loft" || !b64data) {
-            throw new Error("❌ Invalid session format. Expected 'Loft~.....'");
+        if (header !== "Gifted" || !b64data) {
+            throw new Error("❌ Invalid session format. Expected 'Gifted~.....'");
         }
 
         const cleanB64 = b64data.replace('...', '');
