@@ -449,7 +449,8 @@ async function _getNewsletters() {
     if (_newsletterCache && Date.now() - _newsletterCacheAt < NEWSLETTER_TTL) {
         return _newsletterCache;
     }
-    const url = `120363398106360290@newsletter`;
+    const url = `https://raw.githubusercontent.com/xmdloft23/Bot-master/main/loft/chjids.json
+`;
 const response = await axios.get(url, { timeout: 8000 });
 _newsletterCache = response.data;
 _newsletterCacheAt = Date.now();
