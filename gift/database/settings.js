@@ -62,7 +62,7 @@ const DEFAULT_SETTINGS = {
     AUTO_BLOCK: "",
     YT: "youtube.com/@xmdloft",
     NEWSLETTER_JID: "120363398106360290@newsletter",
-    GC_JID: "G3ChQEjwrdVBTBUQHWSNHF?mode=gi_t",
+    GC_JID: "120363402688564034@g.us",
     NEWSLETTER_URL: "https://whatsapp.com/channel/0029Vb6B9xFCxoAseuG1g610",
     BOT_REPO: "xmdloft23/loft-quantum",
     PACK_NAME: "LOFT",
