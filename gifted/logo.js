@@ -256,7 +256,7 @@ gmd(
       .join("\n");
 
     await reply(
-      `🎨 *${botName} LOGO MAKER*\n\n${logoList}\n\n📝 *Usage:* ${botPrefix}commandname <your text>\n📌 *Example:* ${botPrefix}glossysilver Gifted Tech\n\n> ${botCaption}`,
+      `🎨 *${botName} LOGO MAKER*\n\n${logoList}\n\n📝 *Usage:* ${botPrefix}commandname <your text>\n📌 *Example:* ${botPrefix}glossysilver LOFTxmd\n\n> ${botCaption}`,
     );
     await react("✅");
   },
