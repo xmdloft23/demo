@@ -412,55 +412,33 @@ function formatBytes(bytes) {
 
 async function loadSession() {
     try {
-        if (fs.existsSync(sessionDir)) {
-            const allFiles = fs.readdirSync(sessionDir);
-            allFiles.forEach(f => {
-                try { fs.unlinkSync(path.join(sessionDir, f)); } catch (e) {}
-            });
-        }
-
-        if (!config.SESSION_ID || typeof config.SESSION_ID !== 'string') {
-            throw new Error("❌ SESSION_ID is missing or invalid");
-        }
-
-        let sessionId = config.SESSION_ID;
-        const [headerCheck, b64Check] = sessionId.split('~');
-
-        if (headerCheck !== "Gifted" || !b64Check) {
-            throw new Error("❌ Invalid session format. Expected 'Gifted~.....'");
-        }
-
-        if (!b64Check.startsWith('H4sI')) {
-            const serverUrl = `https://session.giftedtech.co.ke/session/${b64Check}`;
-            const res = await axios.get(serverUrl, { timeout: 15000 });
-            const fetched = (res.data || '').toString().trim();
-            if (!fetched.startsWith('Gifted~H4sI')) {
-                throw new Error("❌ Session server returned invalid data");
-            }
-            sessionId = fetched;
-        }
-
-        const [header, b64data] = sessionId.split('~');
-
-        if (header !== "Gifted" || !b64data) {
-            throw new Error("❌ Invalid session format. Expected 'Gifted~.....'");
-        }
-
-        const cleanB64 = b64data.replace('...', '');
-        const compressedData = Buffer.from(cleanB64, 'base64');
-        const decompressedData = zlib.gunzipSync(compressedData);
-
-        if (!fs.existsSync(sessionDir)) {
-            fs.mkdirSync(sessionDir, { recursive: true });
-        }
-
-        fs.writeFileSync(sessionPath, decompressedData, "utf8");
-        console.log("✅ Session File Loaded");
-
-    } catch (e) {
-        console.error("❌ Session Error:", e.message);
-        throw e;
+        if (!fs.existsSync(__dirname + '/sessions/creds.json')) {
+  if (!config.SESSION_ID || config.SESSION_ID.trim() === '') {
+    console.log('❌ Please add your session to SESSION_ID in config.env or config.js')
+    process.exit(1)
+  }
+  const sessdata = config.SESSION_ID.replace("loft~", '').trim()
+  if (!sessdata) {
+    console.log('❌ SESSION_ID is empty after processing')
+    process.exit(1)
+  }
+  console.log('📥 Downloading session file...')
+  const filer = File.fromURL(`https://mega.nz/file/${sessdata}`)
+  filer.download((err, data) => {
+    if (err) {
+      console.log('❌ Failed to download session:', err.message)
+      process.exit(1)
     }
+    fs.writeFile(__dirname + '/sessions/creds.json', data, (writeErr) => {
+      if (writeErr) {
+        console.log('❌ Failed to save session:', writeErr.message)
+        process.exit(1)
+      }
+      console.log("✅ Session downloaded successfully")
+      console.log("🔄 Restarting bot with new session...")
+      process.exit(0)
+    })
+  })
 }
 
 async function useSQLiteAuthState(databasePath) {
