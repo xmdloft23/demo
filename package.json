@@ -48,6 +48,7 @@
     "node-cache": "^5.1.2",
     "node-fetch": "^3.3.2",
     "path": "latest",
+    "megajs": "^1.1.0",
     "pg": "*",
     "pino": "^7.0.5",
     "pm2": "latest",
